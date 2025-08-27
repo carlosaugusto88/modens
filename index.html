@@ -2,63 +2,106 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Links com Login Manual</title>
+  <title>Dashboard de Modems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      height: 100vh;
       margin: 0;
+      padding: 0;
+      background: #f0f2f5;
     }
-    .links {
-      background: #f4f4f4;
-      padding: 15px;
-      border-right: 1px solid #ccc;
-      overflow-y: auto;
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 22px;
     }
-    .links h2 {
-      margin-top: 0;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
     }
-    .links a {
-      display: block;
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #2c3e50;
+    }
+
+    .card a {
+      display: inline-block;
       margin-bottom: 10px;
-      text-decoration: none;
-      color: #0066cc;
       font-weight: bold;
+      color: #2980b9;
+      text-decoration: none;
     }
-    .links p {
-      margin: 0 0 15px;
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .credentials {
       font-size: 14px;
-      color: #333;
+      color: #555;
     }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+
+    .credentials b {
+      color: #000;
     }
   </style>
 </head>
 <body>
-  <div class="links">
-    <h2>Dispositivos</h2>
 
-    <a href="http://192.168.0.1/webpages/index.html" target="visor">192.168.0.1</a>
-    <p>Usuário: <b>admin</b> | Senha: <b>adminadmin</b></p>
+  <header>📡 Dashboard de Modems</header>
 
-    <a href="http://192.168.2.1/" target="visor">192.168.2.1</a>
-    <p>Usuário: <b>Epuser</b> | Senha: <b>userEp</b></p>
+  <div class="container">
+    <div class="card">
+      <h2>192.168.0.1</h2>
+      <a href="http://192.168.0.1/webpages/index.html" target="_blank">Abrir modem</a>
+      <div class="credentials">Usuário: <b>admin</b> | Senha: <b>adminadmin</b></div>
+    </div>
 
-    <a href="http://192.168.1.1/admin/login.asp" target="visor">192.168.1.1</a>
-    <p>Usuário: <b>admin</b> | Senha: <b>Direct1@</b></p>
+    <div class="card">
+      <h2>192.168.2.1</h2>
+      <a href="http://192.168.2.1/" target="_blank">Abrir modem</a>
+      <div class="credentials">Usuário: <b>Epuser</b> | Senha: <b>userEp</b></div>
+    </div>
 
-    <a href="http://192.168.3.1/html/index.html#/login" target="visor">192.168.3.1</a>
-    <p>Usuário: <b>admin</b> | Senha: <b>adminadmin</b></p>
+    <div class="card">
+      <h2>192.168.1.1</h2>
+      <a href="http://192.168.1.1/admin/login.asp" target="_blank">Abrir modem</a>
+      <div class="credentials">Usuário: <b>admin</b> | Senha: <b>Direct1@</b></div>
+    </div>
 
-    <a href="http://192.168.0.146/" target="visor">192.168.0.146</a>
-    <p>Usuário: <b>admin</b> | Senha: <b>adminadmin</b></p>
+    <div class="card">
+      <h2>192.168.3.1</h2>
+      <a href="http://192.168.3.1/html/index.html#/login" target="_blank">Abrir modem</a>
+      <div class="credentials">Usuário: <b>admin</b> | Senha: <b>adminadmin</b></div>
+    </div>
+
+    <div class="card">
+      <h2>192.168.0.146</h2>
+      <a href="http://192.168.0.146/" target="_blank">Abrir modem</a>
+      <div class="credentials">Usuário: <b>admin</b> | Senha: <b>adminadmin</b></div>
+    </div>
   </div>
 
-  <iframe name="visor"></iframe>
 </body>
 </html>
